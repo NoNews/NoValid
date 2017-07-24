@@ -1,13 +1,13 @@
-package ru.alexbykov.simplevalidator;
+package ru.alexbykov.novalid;
 
 import android.app.Application;
 import android.text.Editable;
 import android.util.Patterns;
 
-import ru.alexbykov.simplevalidator.custom.AbstractFieldSettings;
-import ru.alexbykov.simplevalidator.custom.FieldSettingsStore;
-import ru.alexbykov.simplevalidator.utils.Gender;
-import ru.alexbykov.simplevalidator.utils.StringUtils;
+import ru.alexbykov.novalid.custom.AbstractFieldSettings;
+import ru.alexbykov.novalid.custom.FieldSettingsStore;
+import ru.alexbykov.novalid.utils.Gender;
+import ru.alexbykov.novalid.utils.StringUtils;
 
 
 /**

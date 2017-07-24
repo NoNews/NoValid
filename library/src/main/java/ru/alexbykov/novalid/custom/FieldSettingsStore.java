@@ -1,4 +1,4 @@
-package ru.alexbykov.simplevalidator.custom;
+package ru.alexbykov.novalid.custom;
 
 import java.util.HashMap;
 

@@ -1,4 +1,4 @@
-package ru.alexbykov.simplevalidator;
+package ru.alexbykov.novalid;
 
 import org.junit.Test;
 

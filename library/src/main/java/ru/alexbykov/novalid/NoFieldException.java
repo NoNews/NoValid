@@ -1,4 +1,4 @@
-package ru.alexbykov.simplevalidator;
+package ru.alexbykov.novalid;
 
 /**
  * Date: 23.07.2017
