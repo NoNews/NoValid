@@ -1,5 +1,7 @@
 package ru.alexbykov.novalid.utils;
 
+import android.text.TextUtils;
+
 /**
  * Date: 23.07.2017
  * Time: 10:10
@@ -15,10 +17,10 @@ public class StringUtils {
     }
 
     public static boolean isEmpty(String text) {
-        return (text == null || text.isEmpty() || isOnlySpaces(text));
+        return (TextUtils.isEmpty(text) || isOnlySpaces(text));
     }
 
     public static boolean isOnlySpaces(String text) {
-          return !text.matches(".*\\w.*");
+          return !(text.trim().length() > 0);
     }
 }
