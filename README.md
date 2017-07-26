@@ -5,9 +5,7 @@ Android validation library
 
 ### Gradle
 
-    repositories {
-        maven {url 'https://dl.bintray.com/nonews/maven/' }
-    }
+
 
     compile 'ru.alexbykov:novalid:1.0.0'
 

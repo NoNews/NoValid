@@ -3,4 +3,6 @@
     <string name="empty_field_male">Не указан</string>
     <string name="empty_field_female">Не указана</string>
     <string name="empty_field_middle">Не указано</string>
+    <string name="empty_field_insert">Введите</string>
+    <string name="empty_field_choose">Выберите</string>
 </resources>

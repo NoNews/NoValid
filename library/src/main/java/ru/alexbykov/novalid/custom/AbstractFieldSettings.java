@@ -1,6 +1,6 @@
 package ru.alexbykov.novalid.custom;
 
-import android.app.Application;
+import android.content.Context;
 
 /**
  * Date: 23.07.2017
@@ -15,15 +15,15 @@ public abstract class AbstractFieldSettings<T> {
 
     protected T field;
 
-    protected Application application;
+    protected Context context;
 
     public abstract boolean isValid();
 
     public abstract String getError();
 
 
-    public void setApplication(Application application) {
-        this.application = application;
+    public void setContext(Context context) {
+        this.context = context;
     }
 
     public void setField(T field) {
@@ -31,7 +31,6 @@ public abstract class AbstractFieldSettings<T> {
     }
 
     public T getField() {
-
         return field;
     }
 }
