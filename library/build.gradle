@@ -33,7 +33,7 @@ dependencies {
 publish {
     groupId = 'ru.alexbykov'
     artifactId = 'novalid'
-    publishVersion = '1.0.0'
+    publishVersion = '1.0.1'
     desc = 'Validation library for Android'
     licences = ['Apache-2.0']
     website = 'https://github.com/NoNews/NoValid'

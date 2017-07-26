@@ -7,7 +7,43 @@ Android validation library
 
 
 
-    compile 'ru.alexbykov:novalid:1.0.0'
+    compile 'ru.alexbykov:novalid:1.0.1'
+
+
+
+
+
+### Custom Validation
+
+```
+public class PasswordSettings extends AbstractFieldSettings<String> {
+    private static final int PASSWORD_ERROR = R.string.error_password;
+    private static final int MIN_PASSWORD_LENGTH = 6;
+
+    @Override
+    public boolean isValid() {
+        return field.length() >= MIN_PASSWORD_LENGTH;
+    }
+
+    @Override
+    public String getError() {
+        return context.getString(PASSWORD_ERROR);
+      }
+    }
+   ```
+
+#### Check it
+```
+    private void checkPassword(String password) {
+
+        if (validator.isValidField(PasswordSettings.class, password){
+             //do what you want
+        }
+        else {
+             showError(validator.getError(PasswordSettings.class));
+        }
+    }
+  ```
 
 
 #### License
