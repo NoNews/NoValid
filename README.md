@@ -26,7 +26,7 @@ Validator validator = new Validator(context);
 | isValidField|String or Editable |  boolean   | Check  for null/empty/only spaces|
 | isValidField|Class<? extends AbstractFieldSettings> clazz, T t)  | boolean   | Check custom validation settings|
 | getError|Class<? extends AbstractFieldSettings> clazz, T t)  |  String   | Get error from custom validation settings (will check last field)|
-| getValidField|String  or String, Gender  || Will return value or placeholder with the corresponding gender|
+| getValidField|String  or String, Gender  |String| Will return value or placeholder with the corresponding gender|
 | getValidInsertField|String| String   | Will return value or placeholder for insert field|
 | getValidChooseField|String |  String   | Will return value or placeholder for choose field|
 | withDefaultGender|Gender.MASCULINE  or Gender.FEMININE or Gender.NEUTER |  String   | Set default gender for  method getValidField (default = MASCULINE)|
