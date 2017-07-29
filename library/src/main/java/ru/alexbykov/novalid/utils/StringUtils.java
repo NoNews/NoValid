@@ -20,7 +20,7 @@ public class StringUtils {
         return (TextUtils.isEmpty(text) || isOnlySpaces(text));
     }
 
-    public static boolean isOnlySpaces(String text) {
-          return !(text.trim().length() > 0);
+    private static boolean isOnlySpaces(String text) {
+        return (text.trim().length() == 0);
     }
 }
