@@ -5,8 +5,6 @@ Android validation library
 
 ### Gradle
 
-
-
     compile 'ru.alexbykov:novalid:1.0.1'
 
 

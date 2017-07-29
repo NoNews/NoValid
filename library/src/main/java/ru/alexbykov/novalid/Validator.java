@@ -28,7 +28,7 @@ public class Validator {
     public Validator(Application application) {
         this.context = application;
         store = new FieldSettingsStore();
-        defaultGender = Gender.MALE;
+        defaultGender = Gender.MASCULINE;
     }
 
 
@@ -57,7 +57,7 @@ public class Validator {
     }
 
     @SuppressWarnings("unchecked")
-    public <T> String getError(Class<? extends AbstractFieldSettings> clazz) {
+    public String getError(Class<? extends AbstractFieldSettings> clazz) {
         AbstractFieldSettings fieldSettings = store.get(clazz);
 
         if (fieldSettings.getField() == null) {
@@ -66,6 +66,7 @@ public class Validator {
         fieldSettings.setContext(context);
         return fieldSettings.getError();
     }
+
 
     public boolean isValidEmail(String email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
@@ -76,19 +77,19 @@ public class Validator {
     }
 
     public String getValidField(String field, Gender gender) {
-        return isValidField(field) ? getEmptyDefaultField(gender) : field;
+        return isValidField(field) ? field: getEmptyDefaultField(gender) ;
     }
 
     public String getValidField(String field) {
-        return isValidField(field) ? getEmptyDefaultField(defaultGender) : field;
+        return isValidField(field) ? field : getEmptyDefaultField(defaultGender);
     }
 
     public String getValidChooseField(String field) {
-        return isValidField(field) ? field : getString(R.string.empty_field_choose);
+        return isValidField(field) ? field : getString(R.string.default_empty_field_choose);
     }
 
     public String getValidInsertField(String field) {
-        return isValidField(field) ? field : getString(R.string.empty_field_insert);
+        return isValidField(field) ? field : getString(R.string.default_empty_field_insert);
     }
 
 
@@ -97,11 +98,11 @@ public class Validator {
     }
 
     private String getEmptyDefaultField(Gender gender) {
-        if (gender == Gender.MALE) {
-            return getString(R.string.empty_field_male);
-        } else if (gender == Gender.FEMALE) {
-            return getString(R.string.empty_field_female);
-        } else return getString(R.string.empty_field_middle);
+        if (gender == Gender.MASCULINE) {
+            return getString(R.string.default_empty_field_masculine);
+        } else if (gender == Gender.FEMININE) {
+            return getString(R.string.default_empty_field_feminine);
+        } else return getString(R.string.default_empty_field_neuter);
     }
 
 }

@@ -9,5 +9,5 @@ package ru.alexbykov.novalid.utils;
  *         You can contact me at me@alexbykov.ru
  */
 public enum Gender {
-    MALE, FEMALE, UKNOWN
+    MASCULINE, FEMININE, NEUTER
 }

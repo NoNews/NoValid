@@ -1,8 +1,10 @@
 <resources>
+    //default fields
     <string name="app_name">SimpleValidator</string>
-    <string name="empty_field_male">Не указан</string>
-    <string name="empty_field_female">Не указана</string>
-    <string name="empty_field_middle">Не указано</string>
-    <string name="empty_field_insert">Введите</string>
-    <string name="empty_field_choose">Выберите</string>
+    <string name="default_empty_field_masculine">Не указан</string>
+    <string name="default_empty_field_feminine">Не указана</string>
+    <string name="default_empty_field_neuter">Не указано</string>
+    //
+    <string name="default_empty_field_insert">Введите</string>
+    <string name="default_empty_field_choose">Выберите</string>
 </resources>

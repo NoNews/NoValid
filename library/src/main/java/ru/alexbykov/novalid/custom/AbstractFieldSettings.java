@@ -33,4 +33,8 @@ public abstract class AbstractFieldSettings<T> {
     public T getField() {
         return field;
     }
+
+    protected String getString(int resId) {
+        return context.getString(resId);
+    }
 }
