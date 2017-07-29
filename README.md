@@ -3,16 +3,37 @@
 Android validation library
 
 
-### Gradle
+#### Gradle
 
-    compile 'ru.alexbykov:novalid:1.0.1'
-
-
+    compile 'ru.alexbykov:novalid:1.0.2'
 
 
+#### Install
 
-### Custom Validation
+```
+Validator validator = new Validator(context);
+```
 
+
+
+
+#### Methods
+
+
+|Method        |Input Type|   Answer type| Description
+| ------------- |:-----:|:-------------:|:-------------:|
+| isValidEmail|```String``` or ```Editable``` |  ```boolean```   |  Check  for valid emai |
+| isValidField|```String``` or ```Editable``` |  ```boolean```   | Check  for null/empty/only spaces|
+| isValidField|```Class<? extends AbstractFieldSettings> clazz, T t) ``` |  ```boolean```   | Check custom validation settings|
+| getError|```Class<? extends AbstractFieldSettings> clazz, T t) ``` |  ```String```   | Get error from custom validation settings (will check last field)|
+| getValidField|```String ``` or ```String, Gender ``` |  ```String```   | Will return value or placeholder with the corresponding gender|
+| getValidInsertField|```String ```|  ```String```   | Will return value or placeholder for insert field|
+| getValidChooseField|```String ```|  ```String```   | Will return value or placeholder for choose field|
+| withDefaultGender|```Gender.MASCULINE ``` or ```Gender.FEMININE ``` or ```Gender.NEUTER ```|  ```String```   | Set default gender for  method ```getValidField``` (default = ```MASCULINE```)|
+
+
+
+#### Custom Validation example
 ```
 public class PasswordSettings extends AbstractFieldSettings<String> {
     private static final int PASSWORD_ERROR = R.string.error_password;
@@ -30,7 +51,7 @@ public class PasswordSettings extends AbstractFieldSettings<String> {
     }
    ```
 
-#### Check it
+##### Check it
 ```
     private void checkPassword(String password) {
 
