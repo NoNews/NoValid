@@ -1,6 +1,6 @@
 # No valid
 
-Android validation library
+Android validation library, in debug mode now.
 
 
 ### Gradle
